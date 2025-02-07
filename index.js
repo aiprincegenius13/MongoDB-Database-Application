@@ -205,19 +205,7 @@ app.patch("/movies/:id", async (req, res) => {
 // });
 
 // /**
-//   DELETE: Delete a movie by _id
-//  */
-// app.delete("/movies/:id", async (req, res) => {
-//   const { id } = req.params;
-//   try {
-//     const db = await connectDB();
-//     const result = await db.collection("movies").deleteOne({ _id: new ObjectId(id) });
 
-//     if (result.deletedCount === 0) {
-//       return res.status(404).json({ message: "Movie not found" });
-//     }
-
-/
 // --- Start the Server ---
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

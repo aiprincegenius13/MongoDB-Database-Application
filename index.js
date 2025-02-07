@@ -183,16 +183,7 @@ app.patch("/movies/:id", async (req, res) => {
 // /**
 //  *PUT: Update a movie by _id
 //  */
-// app.put("/movies/:id", async (req, res) => {
-//   const { id } = req.params;
-//   const updatedData = req.body;
-//   try {
-//     const db = await connectDB();
-//     const result = await db.collection("movies").updateOne(
-//       { _id: new ObjectId(id) },
-//       { $set: updatedData }
-//     );
-
+//
 
 // --- Start the Server ---
 app.listen(PORT, () => {

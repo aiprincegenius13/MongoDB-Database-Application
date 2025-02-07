@@ -217,19 +217,7 @@ app.patch("/movies/:id", async (req, res) => {
 //       return res.status(404).json({ message: "Movie not found" });
 //     }
 
-//     res.json({ message: "Movie deleted successfully" });
-//   } catch (error) {
-//     console.error("Error deleting movie:", error);
-//     res.status(500).json({ error: "Failed to delete movie" });
-//   }
-// });
-
-// /**
-//  * Insert multiple movies
-//  */
-
-// });
-
+/
 // --- Start the Server ---
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

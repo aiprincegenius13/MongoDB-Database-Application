@@ -193,18 +193,6 @@ app.patch("/movies/:id", async (req, res) => {
 //       { $set: updatedData }
 //     );
 
-//     if (result.matchedCount === 0) {
-//       return res.status(404).json({ message: "Movie not found" });
-//     }
-
-//     res.json({ message: "Movie updated successfully" });
-//   } catch (error) {
-//     console.error("Error updating movie:", error);
-//     res.status(500).json({ error: "Failed to update movie" });
-//   }
-// });
-
-// /**
 
 // --- Start the Server ---
 app.listen(PORT, () => {

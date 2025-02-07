@@ -165,26 +165,7 @@ app.patch("/movies/:id", async (req, res) => {
 //   }
 // });
 
-// /**
-//   POST: Create a single movie
-//  */
-// app.post("/movies", async (req, res) => {
-//   try {
-//     const db = await connectDB();
-//     const newMovie = req.body;
-//     const result = await db.collection("movies").insertOne(newMovie);
-//     res.status(201).json({ message: "Movie added", id: result.insertedId });
-//   } catch (error) {
-//     console.error("Error inserting movie:", error);
-//     res.status(500).json({ error: "Failed to add movie" });
-//   }
-// });
-
-// /**
-//  *PUT: Update a movie by _id
-//  */
-//
-
+/
 // --- Start the Server ---
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

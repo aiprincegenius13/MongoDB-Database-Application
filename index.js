@@ -2,6 +2,7 @@ import express from "express";
 import { MongoClient, ObjectId } from "mongodb";
 import mongoose from "mongoose";
 import Movie from "./models/movie.js";
+import User from "./models/user.js";
 import "dotenv/config"
 
 // --- App & Middleware Setup ---
@@ -18,91 +19,15 @@ mongoose.connect(process.env.MONGO_URI).then(() => {
     console.log("Connected to MongoDB")
 })
 
+//====User Routes----
 
-// Helper function to connect to your MongoDB and return the `sample_mflix` DB reference.
-// async function connectDB() {
-//   // If not connected, connect:
-//   if (!client.topology || !client.topology.isConnected()) {
-//     await client.connect();
-//   }
-//   return client.db("sample_mflix");
-// }
+app.get("/users", async (req, res) => {
+    const users = await User.find()
+    res.json(
+         users
+    )
+ })
 
-// Optional: Predefined movies to insert.
-// const newMovies = [
-//   {
-//     title: "The Great Omen of the Mana God",
-//     writers: ["Jamar Johnson"],
-//     directors: ["Jamar Johnson"],
-//     plot: "A god thrown out of the heavens, once revered for his heroic deeds, turns to the darkness...",
-//     fullplot: "Among the earliest existing films in American cinema...",
-//     languages: ["English"],
-//     released: new Date("1903-12-01T00:00:00.000Z"),
-//     rated: "TV-G",
-//     awards: {},
-//     lastupdated: "2015-08-13 00:27:59.177000000",
-//     year: 1903,
-//     imdb: {},
-//     countries: ["USA"],
-//     type: "movie",
-//     tomatoes: {},
-//     num_mflix_comments: 0
-//   },
-//   {
-//     title: "A Trip to a Fantasy Land",
-//     writers: ["Jamar Johnson"],
-//     directors: ["Jamar Johnson"],
-//     plot: "Lost in a multiverse of worlds, Jack must traverse the multiverse to survive.",
-//     fullplot: "A young boy finds a mysterious ring that allows him to travel between untold worlds...",
-//     languages: ["French"],
-//     released: new Date("1902-09-01T00:00:00.000Z"),
-//     rated: "TV-G",
-//     awards: {},
-//     lastupdated: "2015-08-13 00:27:59.177000000",
-//     year: 1902,
-//     imdb: {},
-//     countries: ["France"],
-//     type: "movie",
-//     tomatoes: {},
-//     num_mflix_comments: 0
-//   },
-//   {
-//     title: "Gunsmith of the Manaforged",
-//     writers: ["Jamar Johnson"],
-//     directors: ["Jamar Johnson"],
-//     plot: "Born in a fantasy world with memories from his previous life...",
-//     fullplot: "Peter, formerly known as Xavier in his past life, is reborn in a world filled with mana...",
-//     languages: ["English"],
-//     released: new Date("2024-01-01T00:00:00.000Z"),
-//     rated: "TV-R",
-//     awards: {},
-//     lastupdated: "2015-08-13 00:27:59.177000000",
-//     year: 2024,
-//     imdb: {},
-//     countries: ["USA"],
-//     type: "movie",
-//     tomatoes: {},
-//     num_mflix_comments: 0
-//   },
-//   {
-//     title: "The Kiss of the Mana Drain",
-//     writers: ["Jamar Johnson"],
-//     directors: ["Jamar Johnson"],
-//     plot: "A forbidden love story that transcends time and magic.",
-//     fullplot: "An ancient tale of power and betrayal, where a single kiss can drain the life force...",
-//     languages: ["Aramaic"],
-//     released: new Date("-4000-01-01T00:00:00.000Z"), // Handling ancient dates
-//     rated: "TV-R",
-//     awards: {},
-//     lastupdated: "2015-08-13 00:27:59.177000000",
-//     year: -4000, // Negative year to represent ancient times
-//     imdb: {},
-//     countries: ["Pangea"],
-//     type: "movie",
-//     tomatoes: {},
-//     num_mflix_comments: 0
-//   }
-// ];
 
 // --- Routes ---
 

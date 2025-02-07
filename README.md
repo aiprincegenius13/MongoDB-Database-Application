@@ -17,3 +17,9 @@ Application querying the my Fantasy database, under the movies documents, utiliz
 - Ensure that the program runs without errors.
 - Include a README file that contains a description of your application.
 - This README must include a description of your API's available routes and their corresponding CRUD operations for reference.
+
+## Route Detail
+- GET "/movies" -gets all movies (READ)
+- POST "/movies" -post a new movie to database (Create)
+- DELETE "/movies/:id" - Deletes a movie from the database (DELETE)
+- PATCH "/movies/:id" - Updatesmovie in the database (UPDATE)

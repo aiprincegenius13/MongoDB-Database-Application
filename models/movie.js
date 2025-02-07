@@ -25,8 +25,9 @@ const movieSchema= new mongoose.Schema({
         type: String,
         required: true
     },
-})     //Index for searching for moviews by title
-   movieSchema.index({title: "text"})
+});
+    //Index for searching for moviews by title
+   movieSchema.index({title: "text" });
    const Movie = mongoose.model("Movie", movieSchema)
 
    export default Movie

@@ -23,3 +23,9 @@ Application querying the my Fantasy database, under the movies documents, utiliz
 - POST "/movies" -post a new movie to database (Create)
 - DELETE "/movies/:id" - Deletes a movie from the database (DELETE)
 - PATCH "/movies/:id" - Updatesmovie in the database (UPDATE)
+
+- GET "/users" -gets all users (READ)
+- POST "/users" -post a new user to database (Create)
+
+- GET "/reviews" -gets all reviews (READ)
+- POST "/reviews" -post a new reviews to database (Create)

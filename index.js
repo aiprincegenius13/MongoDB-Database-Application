@@ -3,6 +3,7 @@ import { MongoClient, ObjectId } from "mongodb";
 import mongoose from "mongoose";
 import Movie from "./models/movie.js";
 import User from "./models/user.js";
+import Review from "./models/reviews.js";
 import "dotenv/config"
 
 // --- App & Middleware Setup ---
@@ -19,6 +20,26 @@ mongoose.connect(process.env.MONGO_URI).then(() => {
     console.log("Connected to MongoDB")
 })
 
+//=====Review Routes-------
+
+app.get("/reviews", async (req, res) => {
+    const reviews = await Review.find()
+    res.json(
+         reviews
+    )
+ })
+
+ app.post("/reviews", async (req, res) => {
+    const newReview = new Review(req.body)
+    const reviews = await newReview.save()
+    res.json(reviews)
+})
+
+
+
+
+
+
 //====User Routes----
 
 app.get("/users", async (req, res) => {
@@ -27,6 +48,12 @@ app.get("/users", async (req, res) => {
          users
     )
  })
+
+ app.post("/users", async (req, res) => {
+    const newUser = new User(req.body)
+    const user = await newUser.save()
+    res.json(user)
+})
 
 
 // --- Routes ---

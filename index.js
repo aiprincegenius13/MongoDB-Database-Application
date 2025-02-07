@@ -227,18 +227,7 @@ app.patch("/movies/:id", async (req, res) => {
 // /**
 //  * Insert multiple movies
 //  */
-// app.put("/updatedMovies", async (req, res) => {
-//   try {
-//     const db = await connectDB();
-//     const result = await db.collection("movies").insertMany(newMovies);
-//     res.status(201).json({
-//       message: "Sample movies inserted successfully",
-//       insertedCount: result.insertedCount
-//     });
-//   } catch (error) {
-//     console.error("Error inserting predefined movies:", error);
-//     res.status(500).json({ error: "Failed to insert predefined movies" });
-//   }
+
 // });
 
 // --- Start the Server ---

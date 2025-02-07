@@ -1,0 +1,1 @@
+Application querying the sample_movie cluster, under the movies documents, utilizing CRUB operations to add, post, update, delete from the documents.

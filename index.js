@@ -135,25 +135,7 @@ app.patch("/movies/:id", async (req, res) => {
     res.json(updatedMovie)
  
 })
-// /**
-//  * 1) GET: Read all movies
-//  */
-// app.get("/movies", async (req, res) => {
-//   try {
-//     const db = await connectDB();
-//     const movies = await db.collection("movies").find({}).limit(50).toArray();
-//     res.status(200).json(movies);
-//   } catch (error) {
-//     console.error("Error fetching movies:", error);
-//     res.status(500).json({ error: "Failed to fetch movies" });
-//   }
-// });
 
-// /**
-//   POST: Create multiple movies (Bulk insert)
-//  */
-/
-/
 // --- Start the Server ---
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

@@ -152,19 +152,7 @@ app.patch("/movies/:id", async (req, res) => {
 // /**
 //   POST: Create multiple movies (Bulk insert)
 //  */
-// app.post("/movies/many", async (req, res) => {
-//   const moviesToInsert = req.body; // Expecting an array of movies
-
-//   try {
-//     const db = await connectDB();
-//     const result = await db.collection("movies").insertMany(moviesToInsert);
-//     res.status(201).json({ message: "Multiple movies added", insertedCount: result.insertedCount, insertedIds: result.insertedIds });
-//   } catch (error) {
-//     console.error("Error inserting multiple movies:", error);
-//     res.status(500).json({ error: "Failed to add multiple movies" });
-//   }
-// });
-
+/
 /
 // --- Start the Server ---
 app.listen(PORT, () => {
